@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "year": 2026,
+    "organizers": [ "matthias-walter", "frederic", "gautam" ],
+    "dates": { "morning": 2, "afternoon": 2 }
+  },
   "penalties": {
     "same-position": 1,
     "same-group": 10,
@@ -303,6 +308,69 @@
       "firstname": "Eyal",
       "role": "assistant",
       "chair": "sor",
+      "group": "mor"
+    },
+    "gjerrit": {
+      "lastname": "Meinsma",
+      "firstname": "Gjerrit",
+      "role": "lecturer",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "martijn": {
+      "lastname": "Gösgens",
+      "firstname": "Martijn",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "frank": {
+      "lastname": "Röttger",
+      "firstname": "Frank",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "gaurav": {
+      "lastname": "Rattan",
+      "firstname": "Gaurav",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "marie-colette": {
+      "lastname": "van Lieshout",
+      "firstname": "Marie-Colette",
+      "role": "professor",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "marc": {
+      "lastname": "Uetz",
+      "firstname": "Marc",
+      "role": "professor",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "aleida": {
+      "lastname": "Braaksma",
+      "firstname": "Aleida",
+      "role": "lecturer",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "karsten": {
+      "lastname": "Kruse",
+      "firstname": "Karsten",
+      "role": "assistant",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "jorn": {
+      "lastname": "van der Pol",
+      "firstname": "Jorn",
+      "role": "lecturer",
+      "chair": "dmmp",
       "group": "mor"
     }
   },
