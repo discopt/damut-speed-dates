@@ -84,9 +84,9 @@ class Person:
     return self.name
 
   def __repr__(self):
-    history = ", ".join( [ f'{year}: {others}' for year,others in self._history.items() ] )
+    history = "\n".join( [ f'  {year}: {others}' for year,others in self._history.items() ] )
       
-    return f'{self.name} ({self.firstname} {self.lastname} is {self.role} in {self.chair}/{self.group}): {history}'
+    return f'{self.name} ({self.firstname} {self.lastname} is {self.role} in {self.chair}/{self.group}):\n{history}'
 
 def parse_people(config_data):
   from itertools import permutations
@@ -116,6 +116,7 @@ if __name__ == '__main__':
   import sys
 
   config_file_name = sys.argv[1]
+  registrations_file_name = sys.argv[2]
 
   config_data = json.loads(open(config_file_name, 'r').read())
   settings = parse_settings(config_data)
@@ -125,7 +126,7 @@ if __name__ == '__main__':
   for p,data in people.items():
     print(repr(data))
 
-  dates = parse_registrations('registrations.csv')
+  dates = parse_registrations(registrations_file_name)
 
   for date,date_people in dates.items():
     for p in date_people:
