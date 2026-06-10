@@ -1,0 +1,377 @@
+{
+  "penalties": {
+    "same-position": 1,
+    "same-group": 10,
+    "same-chair": 100,
+    "unassigned-1": 10000,
+    "unassigned-2": 100000,
+    "unassigned-3": 1000000,
+    "1-year-ago": 10000,
+    "2-years-ago": 1000,
+    "3-years-ago": 100
+  },
+  "people": {
+    "johann": {
+      "lastname": "Hurink",
+      "firstname": "Johann",
+      "role": "professor",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "silke": {
+      "lastname": "Glas",
+      "firstname": "Silke",
+      "role": "assistant",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "felix": {
+      "lastname": "Schwenninger",
+      "firstname": "Felix",
+      "role": "associate",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "antonios": {
+      "lastname": "Antoniadis",
+      "firstname": "Antonios",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "ruben": {
+      "lastname": "Hoeksma",
+      "firstname": "Ruben",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "rianne": {
+      "lastname": "de Heide",
+      "firstname": "Rianne",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "stefano": {
+      "lastname": "Piceghello",
+      "firstname": "Stefano",
+      "role": "lecturer",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "maria": {
+      "lastname": "Vlasiou",
+      "firstname": "Maria",
+      "role": "professor",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "nathanael": {
+      "lastname": "Skrepek",
+      "firstname": "Nathanael",
+      "role": "assistant",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "hil": {
+      "lastname": "Meijer",
+      "firstname": "Hil",
+      "role": "associate",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "anne": {
+      "lastname": "Zander",
+      "firstname": "Anne",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "gautam": {
+      "lastname": "Pai",
+      "firstname": "Gautam",
+      "role": "assistant",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "tracy": {
+      "lastname": "Craig",
+      "firstname": "Tracy",
+      "role": "associate",
+      "chair": "fermat",
+      "group": "fermat"
+    },
+    "jose": {
+      "lastname": "Iglesias Martínez",
+      "firstname": "José",
+      "role": "assistant",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "bodo": {
+      "lastname": "Manthey",
+      "firstname": "Bodo",
+      "role": "associate",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "frederic": {
+      "lastname": "Schuller",
+      "firstname": "Frederic",
+      "role": "professor",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "richard": {
+      "lastname": "Boucherie",
+      "firstname": "Richard",
+      "role": "professor",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "jelmer": {
+      "lastname": "Wolterink",
+      "firstname": "Jelmer",
+      "role": "associate",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "bernard": {
+      "lastname": "Geurts",
+      "firstname": "Bernard",
+      "role": "professor",
+      "chair": "3ms",
+      "group": "magnus"
+    },
+    "maria-christina": {
+      "lastname": "van der Weele",
+      "firstname": "Maria Christina",
+      "role": "lecturer",
+      "chair": "mast",
+      "group": "magnus"
+    },
+    "clara": {
+      "lastname": "Stegehuis",
+      "firstname": "Clara",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "judith": {
+      "lastname": "Timmer",
+      "firstname": "Judith",
+      "role": "lecturer",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "mentzelos": {
+      "lastname": "Melistas",
+      "firstname": "Mentzelos",
+      "role": "lecturer",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "peter": {
+      "lastname": "Veltink",
+      "firstname": "Peter",
+      "role": "professor",
+      "chair": "eemcs",
+      "group": "eemcs"
+    },
+    "jasper-goseling": {
+      "lastname": "Goseling",
+      "firstname": "Jasper",
+      "role": "associate",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "fulya": {
+      "lastname": "Kula",
+      "firstname": "Fulya",
+      "role": "assistant",
+      "chair": "fermat",
+      "group": "fermat"
+    },
+    "janusz": {
+      "lastname": "Meylahn",
+      "firstname": "Janusz",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "carlos": {
+      "lastname": "Pérez Arancibia",
+      "firstname": "Carlos",
+      "role": "associate",
+      "chair": "macs",
+      "group": "magnus"
+    },
+    "tomasz": {
+      "lastname": "Tyranowski",
+      "firstname": "Tomasz",
+      "role": "assistant",
+      "chair": "macs",
+      "group": "magnus"
+    },
+    "pim": {
+      "lastname": "van 't Hof",
+      "firstname": "Pim",
+      "role": "lecturer",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "matthias-schlottbom": {
+      "lastname": "Schlottbom",
+      "firstname": "Matthias",
+      "role": "associate",
+      "chair": "macs",
+      "group": "magnus"
+    },
+    "matthias-walter": {
+      "lastname": "Walter",
+      "firstname": "Matthias",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "christoph": {
+      "lastname": "Brune",
+      "firstname": "Christoph",
+      "role": "professor",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "alexander": {
+      "lastname": "Skopalik",
+      "firstname": "Alexander",
+      "role": "assistant",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "mirije": {
+      "lastname": "van Dijk",
+      "firstname": "Mirije",
+      "role": "professor",
+      "chair": "eemcs",
+      "group": "eemcs"
+    },
+    "jasper-jong": {
+      "lastname": "de Jong",
+      "firstname": "Jasper",
+      "role": "lecturer",
+      "chair": "dmmp",
+      "group": "mor"
+    },
+    "werner": {
+      "lastname": "Scheinhart",
+      "firstname": "Werner",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    },
+    "marcello": {
+      "lastname": "Carioni",
+      "firstname": "Marcello",
+      "role": "assistant",
+      "chair": "mia",
+      "group": "mds"
+    },
+    "lerna": {
+      "lastname": "Pehlivan",
+      "firstname": "Lerna",
+      "role": "lecturer",
+      "chair": "fermat",
+      "group": "fermat"
+    },
+    "ashoke": {
+      "lastname": "Sinha",
+      "firstname": "Ashoke",
+      "role": "lecturer",
+      "chair": "stats",
+      "group": "mds"
+    },
+    "johannes": {
+      "lastname": "Schmidt-Hieber",
+      "firstname": "Johannes",
+      "role": "professor",
+      "chair": "stats",
+      "group": "mds"
+    },
+    "eyal": {
+      "lastname": "Castiel",
+      "firstname": "Eyal",
+      "role": "assistant",
+      "chair": "sor",
+      "group": "mor"
+    }
+  },
+  "history": {
+    "2025": [
+      [ "johann", "nathanael" ],
+      [ "johann", "matthias-schlottbom" ],
+      [ "felix", "rianne" ],
+      [ "felix", "richard" ],
+      [ "antonios", "carlos" ],
+      [ "antonios", "frederic" ],
+      [ "ruben", "tracy" ],
+      [ "ruben", "stefano" ],
+      [ "maria", "stefano" ],
+      [ "maria", "tomasz" ],
+      [ "hil", "werner" ],
+      [ "nathanael", "pim" ],
+      [ "anne", "bernard" ],
+      [ "anne", "hil" ],
+      [ "gautam", "johannes" ],
+      [ "gautam", "mentzelos" ],
+      [ "jose", "richard" ],
+      [ "jose", "lerna" ],
+      [ "frederic", "lerna" ],
+      [ "bernard", "werner" ],
+      [ "clara", "maria-christina" ],
+      [ "clara", "peter" ],
+      [ "judith", "marcello" ],
+      [ "judith", "tracy" ],
+      [ "pim", "silke" ],
+      [ "carlos", "matthias-walter" ],
+      [ "christoph", "mentzelos" ],
+      [ "christoph", "rianne" ],
+      [ "alexander", "matthias-schlottbom" ],
+      [ "alexander", "jasper-jong" ],
+      [ "jasper-jong", "tomasz" ],
+      [ "johannes", "marcello" ],
+      [ "eyal", "peter" ],
+      [ "eyal", "maria-christina" ],
+      [ "johann", "judith" ],
+      [ "felix", "matthias-walter" ],
+      [ "felix", "mentzelos" ],
+      [ "antonios", "mentzelos" ],
+      [ "antonios", "maria-christina" ],
+      [ "hil", "maria" ],
+      [ "maria", "ruben" ],
+      [ "anne", "ruben" ],
+      [ "hil", "pim" ],
+      [ "gautam", "johann" ],
+      [ "anne", "stefano" ],
+      [ "bodo", "maria-christina" ],
+      [ "gautam", "jasper-goseling" ],
+      [ "frederic", "janusz" ],
+      [ "bodo", "nathanael" ],
+      [ "bernard", "jasper-jong" ],
+      [ "richard", "silke" ],
+      [ "clara", "stefano" ],
+      [ "bernard", "christoph" ],
+      [ "judith", "nathanael" ],
+      [ "clara", "matthias-schlottbom" ],
+      [ "pim", "richard" ],
+      [ "janusz", "tracy" ],
+      [ "christoph", "jasper-goseling" ],
+      [ "alexander", "frederic" ],
+      [ "alexander", "jelmer" ],
+      [ "jasper-jong", "johannes" ],
+      [ "johannes", "tracy" ],
+      [ "eyal", "jelmer" ],
+      [ "eyal", "matthias-schlottbom" ]
+    ]
+  }
+}
