@@ -5,12 +5,15 @@ import json
 import pandas
 from collections import defaultdict
 
+ROLES = ('lecturer', 'assistant', 'associate', 'professor')
+UNASSIGNED = (1, 2, 3)
+
 class Settings:
 
   def __init__(self, data):
     self._year = data['year']
     self._organizers = tuple(data['organizers'])
-    self._dates = data['dates']
+    self._sizes = data['sizes']
 
   @property
   def year(self):
@@ -22,11 +25,11 @@ class Settings:
 
   @property
   def dates(self):
-    return self._dates.keys()
+    return self._sizes.keys()
 
   @property
-  def dates_sizes(self):
-    return self._dates.items()
+  def sizes(self):
+    return self._sizes
 
 def parse_settings(config_data):
   return Settings(config_data['settings'])
@@ -63,6 +66,10 @@ class Person:
     return self._lastname
 
   @property
+  def fullname(self):
+    return self._firstname + ' ' + self._lastname
+
+  @property
   def chair(self):
     return self._chair
 
@@ -77,16 +84,14 @@ class Person:
   def add_to_history(self, relative_year, other):
     self._history[relative_year].add(other)
 
-  def get_history(self):
-    return self._history
+  def get_history(self, relative_year):
+    return self._history[relative_year]
 
   def __str__(self):
     return self.name
 
   def __repr__(self):
-    history = "\n".join( [ f'  {year}: {others}' for year,others in self._history.items() ] )
-      
-    return f'{self.name} ({self.firstname} {self.lastname} is {self.role} in {self.chair}/{self.group}):\n{history}'
+    return f'{self.name} ({self.firstname} {self.lastname} is {self.role} in {self.chair}/{self.group})'
 
 def parse_people(config_data):
   from itertools import permutations
@@ -100,6 +105,7 @@ def parse_people(config_data):
     for match in data:
       for pair in permutations(match, 2):
         people[pair[0]].add_to_history(current_year - year, pair[1])
+        people[pair[1]].add_to_history(current_year - year, pair[0])
   return people
 
 def parse_registrations(file_name):
@@ -116,20 +122,33 @@ if __name__ == '__main__':
   import sys
 
   config_file_name = sys.argv[1]
-  registrations_file_name = sys.argv[2]
+  registrations_file_name = sys.argv[2] if len(sys.argv) > 2 else None
 
   config_data = json.loads(open(config_file_name, 'r').read())
   settings = parse_settings(config_data)
   penalties = parse_penalties(config_data)
   people = parse_people(config_data)
 
-  for p,data in people.items():
-    print(repr(data))
+  if registrations_file_name:
+    dates = parse_registrations(registrations_file_name)
 
-  dates = parse_registrations(registrations_file_name)
+    unknown_people = set()
+    for date,date_people in dates.items():
+      for p in date_people:
+        if p not in people:
+          unknown_people.add(p)
 
-  for date,date_people in dates.items():
-    for p in date_people:
-      if p not in people:
-        sys.stderr.write(f'{p} is unknown!\n')
+    for p in unknown_people:
+      sys.stderr.write(f'{p} is unknown!\n')
+    if unknown_people:
+      sys.exit(1)
+
+    for date,date_people in dates.items():
+      print(f'===== date {date} =====')
+      for p in date_people:
+        print(f'  {repr(people[p])}')
+
+  else:
+    for p,data in people.items():
+      print(repr(data))
 

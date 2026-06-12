@@ -1,17 +1,17 @@
 {
   "settings": {
     "year": 2026,
-    "organizers": [ "matthias-walter", "frederic", "gautam" ],
-    "dates": { "morning": 2, "afternoon": 2 }
+    "organizers": [ "matthiaswalter", "frederic", "gautam" ],
+    "sizes": { "morning": 3, "afternoon": 3 }
   },
   "penalties": {
-    "same-position": 1,
+    "role": 1,
     "same-group": 10,
     "same-chair": 100,
-    "unassigned-1": 10000,
-    "unassigned-2": 100000,
-    "unassigned-3": 1000000,
-    "1-year-ago": 10000,
+    "unassigned-1": 100000,
+    "unassigned-2": 1000000,
+    "unassigned-3": 10000000,
+    "1-years-ago": 10000,
     "2-years-ago": 1000,
     "3-years-ago": 100
   },
@@ -54,9 +54,9 @@
     "rianne": {
       "lastname": "de Heide",
       "firstname": "Rianne",
-      "role": "assistant",
-      "chair": "sor",
-      "group": "mor"
+      "role": "associate",
+      "chair": "stats",
+      "group": "mds"
     },
     "stefano": {
       "lastname": "Piceghello",
@@ -149,7 +149,7 @@
       "chair": "3ms",
       "group": "magnus"
     },
-    "maria-christina": {
+    "mariachristina": {
       "lastname": "van der Weele",
       "firstname": "Maria Christina",
       "role": "lecturer",
@@ -184,7 +184,7 @@
       "chair": "eemcs",
       "group": "eemcs"
     },
-    "jasper-goseling": {
+    "jaspergoseling": {
       "lastname": "Goseling",
       "firstname": "Jasper",
       "role": "associate",
@@ -226,14 +226,14 @@
       "chair": "dmmp",
       "group": "mor"
     },
-    "matthias-schlottbom": {
+    "matthiasschlottbom": {
       "lastname": "Schlottbom",
       "firstname": "Matthias",
       "role": "associate",
       "chair": "macs",
       "group": "magnus"
     },
-    "matthias-walter": {
+    "matthiaswalter": {
       "lastname": "Walter",
       "firstname": "Matthias",
       "role": "assistant",
@@ -261,7 +261,7 @@
       "chair": "eemcs",
       "group": "eemcs"
     },
-    "jasper-jong": {
+    "jasperjong": {
       "lastname": "de Jong",
       "firstname": "Jasper",
       "role": "lecturer",
@@ -328,8 +328,8 @@
       "lastname": "Röttger",
       "firstname": "Frank",
       "role": "assistant",
-      "chair": "sor",
-      "group": "mor"
+      "chair": "stats",
+      "group": "mds"
     },
     "gaurav": {
       "lastname": "Rattan",
@@ -338,7 +338,7 @@
       "chair": "dmmp",
       "group": "mor"
     },
-    "marie-colette": {
+    "mariecolette": {
       "lastname": "van Lieshout",
       "firstname": "Marie-Colette",
       "role": "professor",
@@ -377,7 +377,7 @@
   "history": {
     "2025": [
       [ "johann", "nathanael" ],
-      [ "johann", "matthias-schlottbom" ],
+      [ "johann", "matthiasschlottbom" ],
       [ "felix", "rianne" ],
       [ "felix", "richard" ],
       [ "antonios", "carlos" ],
@@ -396,50 +396,50 @@
       [ "jose", "lerna" ],
       [ "frederic", "lerna" ],
       [ "bernard", "werner" ],
-      [ "clara", "maria-christina" ],
+      [ "clara", "mariachristina" ],
       [ "clara", "peter" ],
       [ "judith", "marcello" ],
       [ "judith", "tracy" ],
       [ "pim", "silke" ],
-      [ "carlos", "matthias-walter" ],
+      [ "carlos", "matthiaswalter" ],
       [ "christoph", "mentzelos" ],
       [ "christoph", "rianne" ],
-      [ "alexander", "matthias-schlottbom" ],
-      [ "alexander", "jasper-jong" ],
-      [ "jasper-jong", "tomasz" ],
+      [ "alexander", "matthiasschlottbom" ],
+      [ "alexander", "jasperjong" ],
+      [ "jasperjong", "tomasz" ],
       [ "johannes", "marcello" ],
       [ "eyal", "peter" ],
-      [ "eyal", "maria-christina" ],
+      [ "eyal", "mariachristina" ],
       [ "johann", "judith" ],
-      [ "felix", "matthias-walter" ],
+      [ "felix", "matthiaswalter" ],
       [ "felix", "mentzelos" ],
       [ "antonios", "mentzelos" ],
-      [ "antonios", "maria-christina" ],
+      [ "antonios", "mariachristina" ],
       [ "hil", "maria" ],
       [ "maria", "ruben" ],
       [ "anne", "ruben" ],
       [ "hil", "pim" ],
       [ "gautam", "johann" ],
       [ "anne", "stefano" ],
-      [ "bodo", "maria-christina" ],
-      [ "gautam", "jasper-goseling" ],
+      [ "bodo", "mariachristina" ],
+      [ "gautam", "jaspergoseling" ],
       [ "frederic", "janusz" ],
       [ "bodo", "nathanael" ],
-      [ "bernard", "jasper-jong" ],
+      [ "bernard", "jasperjong" ],
       [ "richard", "silke" ],
       [ "clara", "stefano" ],
       [ "bernard", "christoph" ],
       [ "judith", "nathanael" ],
-      [ "clara", "matthias-schlottbom" ],
+      [ "clara", "matthiasschlottbom" ],
       [ "pim", "richard" ],
       [ "janusz", "tracy" ],
-      [ "christoph", "jasper-goseling" ],
+      [ "christoph", "jaspergoseling" ],
       [ "alexander", "frederic" ],
       [ "alexander", "jelmer" ],
-      [ "jasper-jong", "johannes" ],
+      [ "jasperjong", "johannes" ],
       [ "johannes", "tracy" ],
       [ "eyal", "jelmer" ],
-      [ "eyal", "matthias-schlottbom" ]
+      [ "eyal", "matthiasschlottbom" ]
     ]
   }
 }
