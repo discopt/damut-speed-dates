@@ -50,8 +50,10 @@ if __name__ == '__main__':
     print(f'Considering date <{date}>.')
     date_size = settings.sizes[date]
     date_people = dates[date]
-    matches[date] = tuple(map(frozenset, itertools.combinations(date_people, date_size)))
-    print(f'  {len(date_people)} participants to form matches of size {date_size}, giving {len(matches[date])} different matches.')
+    matches[date] = []
+    for s in range(2, date_size+1):
+      matches[date].extend( map(frozenset, itertools.combinations(date_people, s)) )
+    print(f'  {len(date_people)} participants to form matches of size >= 2 and <= {date_size}, giving {len(matches[date])} different matches.')
     pairs_to_matches[date] = defaultdict(set)
     for match in matches[date]:
       for pair in itertools.combinations(match, 2):
@@ -166,13 +168,15 @@ if __name__ == '__main__':
   for date,date_people in dates.items():
     r = len(date_people) % settings.sizes[date]
     if r > 0:
-      model.addCons( sum( var_unassigned.get((date,o), 0) for o in settings.organizers ) >= r, f'min_unassigned_{date}')
+      model.addCons( sum( var_unassigned.get((date,o), 0) for o in settings.organizers ) / r +
+        sum( var for key,var in var_match.items() if key[0] == date and len(key[1]) < settings.sizes[date] ) >= 1, f'number_theory_{date}')
 
   # Objective
   model.setObjective(
     penalties['role'] * (sum(var_too_many_role.values()) + sum(var_too_few_role.values())) +
     penalties['same-group'] * sum(var_count_same_group.values()) +
     penalties['same-chair'] * sum(var_count_same_chair.values()) +
+    penalties['smaller-match'] * sum( var for key,var in var_match.items() if settings.sizes[key[0]] > len(key[1]) ) +
     sum( penalties[f'unassigned-{i}'] * sum(var_num_unassigned[i].values()) for i in UNASSIGNED ) +
     penalties['1-years-ago']/2 * sum( var_count_meet.get(frozenset((p1, p2)), 0) for p1 in all_people for p2 in all_people[p1].get_history(1) ) +
     penalties['2-years-ago']/2 * sum( var_count_meet.get(frozenset((p1, p2)), 0) for p1 in all_people for p2 in all_people[p1].get_history(2) ) +
@@ -216,6 +220,9 @@ if __name__ == '__main__':
         penalty = penalties[f'{y}-years-ago']
         if p2 in all_people[p1].get_history(y):
           print(f'  ${penalty}: {all_people[p1].fullname} and {all_people[p2].fullname} met {y} year ago.')
+  for key,var in var_match.items():
+    if model.getSolVal(sol, var) > 0.5 and settings.sizes[key[0]] > len(key[1]):
+      print(f'  ${penalties["smaller-match"]}: {", ".join(map(lambda x: all_people[x].fullname, key[1]) )} at <{key[0]}> is a smaller match.')
   for i in UNASSIGNED:
     penalty = penalties[f'unassigned-{i}']
     for key,var in var_num_unassigned[i].items():
