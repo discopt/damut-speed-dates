@@ -110,7 +110,7 @@ def parse_people(config_data):
 
 def parse_registrations(file_name):
   sheet = pandas.read_csv(file_name, sep=';')
-  dates = { column: set() for column in sheet.columns if column != 'name' }
+  dates = { column: set() for column in sheet.columns if column != 'name' and column != 'comment' }
   for idx,row in sheet.iterrows():
     for date in dates:
       if int(row[date]) == 1 and not isinstance(row['name'], float):

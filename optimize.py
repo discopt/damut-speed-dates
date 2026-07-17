@@ -183,7 +183,7 @@ if __name__ == '__main__':
     penalties['3-years-ago']/2 * sum( var_count_meet.get(frozenset((p1, p2)), 0) for p1 in all_people for p2 in all_people[p1].get_history(3) )
   )
 
-#  model.writeProblem('debug.lp')
+  model.writeProblem('debug.lp')
   model.setParam('propagating/probing/maxprerounds', 0)
   model.setHeuristics(pyscipopt.SCIP_PARAMSETTING.AGGRESSIVE)
   model.optimize()
